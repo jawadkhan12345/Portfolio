@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>Portfolio</title>
+    <style>
+        * {
+            /* background-color: rgba(130, 130, 130, 0); */
+            background-image: url("images/395.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .navbar a {
+            color: #fffdfd;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        /* JK logo styling */
+        .logo {
+            font-size: 24px;
+            position: absolute;
+            left: 35px;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            margin-right: 10px;
+            color: rgb(252, 252, 252);
+        }
+
+        .logo span {
+            color: red;
+        }
+
+        @media only screen and (max-width : 300px) {
+            .links {
+                display: none;
+            }
+
+            .links a {
+                margin: 0 1rem;
+            }
+
+            .text {
+                font-size: 10px;
+            }
+
+            .box img {
+                width: 200px;
+                height: 200px;
+                position: absolute;
+                top: 63px;
+                right: 30px;
+            }
+
+            .content {
+                display: block;
+                position: absolute;
+                top: 300px;
+                left: 101px;
+                /* margin-bottom: 100px; */
+                /* height: 20%; */
+
+            }
+
+            .para3 {
+                display: none;
+
+            }
+
+
+
+            .no {
+                display: block;
+            }
+
+            /* .blocks {
+                display: none;
+            } */
+            .container {
+                margin-top: 110px;
+                margin-right: 70px;
+                padding: 20px;
+                display: block;
+                position: absolute;
+                top: 350px;
+
+            }
+
+            #btn {
+                position: absolute;
+                top: 133px;
+            }
+
+
+            .container a {
+                display: block;
+                /* text-align: center; */
+                /* position: absolute;
+                top: 10px;
+                right: 15px; */
+                font-size: large;
+            }
+
+            /* .container no {
+                display: none;
+            } */
+
+
+            .skills {
+                margin-top: 250px;
+                margin-left: 100px;
+            }
+
+            .basic {
+                /* display: block;
+                margin-top: 60px; */
+                display: none;
+            }
+
+            .advanceskill {
+                /* margin-top: 310px;
+                margin-left: 100px; */
+                display: none;
+            }
+
+            .advance {
+                display: none;
+            }
+
+
+        }
+
+        /* @media only screen and (max-width : 600px) {
+            .links {
+                display: none;
+            }
+
+            .links a {
+                margin: 0 1rem;
+            }
+
+            .text {
+                font-size: 10px;
+            }
+
+            .box img {
+                width: 200px;
+                height: 200px;
+                position: absolute;
+                top: 70px;
+                right: 10px;
+            }
+
+            .content {
+                display: block;
+                position: absolute;
+                top: 100px;
+                left: 80px;
+
+
+            }
+
+            .para3 {
+                display: none;
+
+            }
+
+
+
+            .no {
+                display: block;
+            }
+
+            .container {
+                margin-top: 110px;
+                margin-right: 70px;
+                padding: 20px;
+                display: block;
+
+            }
+
+            #btn {
+                position: absolute;
+                top: 395px;
+                bottom: -150px;
+            }
+
+
+            .container a {
+                display: block;
+                font-size: large;
+            }
+
+
+
+            .skills {
+                margin-top: 250px;
+                margin-left: 100px;
+            }
+
+
+
+            .advanceskill {
+                margin-top: 310px;
+                margin-left: 100px;
+
+            }
+
+
+
+        } */
+
+        .text-container {
+            overflow: hidden;
+        }
+
+        .text {
+            display: inline-block;
+            animation: slide-in 2s ease-out;
+            animation-fill-mode: forwards;
+            color: white;
+            text-shadow: 2px 2px 4px #5e5d5f;
+
+        }
+
+        @keyframes slide-in {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .mainbox {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-around;
+            margin-top: 60px;
+        }
+
+        .box {
+            display: flex;
+            /* background: radial-gradient(#74d690, #5cbfbb); */
+            padding: 10px;
+            padding-right: 10px;
+            border-bottom-left-radius: 13px;
+            border-bottom-right-radius: 13px;
+            height: 100%;
+        }
+
+
+
+
+        img {
+            width: 100%;
+            height: 130%;
+            border: 6px solid white;
+            border-radius: 50%;
+        }
+
+
+
+        /* .blocks img {
+            width: 100%;
+            height: 130%;
+        } */
+
+        .content {
+            margin-right: 20px;
+            height: 100%;
+        }
+
+        .para3 {
+            width: 36rem;
+            padding: 13px;
+            color: rgb(221, 217, 217);
+            font-weight: 700;
+            /* height: 80%; */
+        }
+
+        #btn3 {
+            color: white;
+            font-weight: bold;
+            background-color: black;
+            width: 7rem;
+            height: 3rem;
+            border: 2px solid white;
+            border-radius: 6px;
+            outline: none;
+
+        }
+
+        .container {
+            display: block;
+            /* justify-content: center; */
+            align-items: center;
+            height: 100vh;
+        }
+
+        .link {
+            display: flex;
+            flex-direction: row-reverse;
+            margin: 0 10px;
+            position: relative;
+            left: -100%;
+            animation: slide-in 1s forwards;
+            font-size: large;
+            color: white;
+        }
+
+        .link:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        @keyframes slide-in {
+            to {
+                left: 0;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            list-style: none;
+            color: rgb(251, 247, 247);
+        }
+
+        #btn {
+            color: rgb(245, 245, 245);
+            /* background-color: rgb(65, 75, 190); */
+            width: 6rem;
+            height: 2rem;
+            border: 2px solid rgb(245, 237, 237);
+            border-radius: 6px;
+            outline: none;
+            margin-bottom: 20px;
+            margin-left: 10px;
+
+
+        }
+
+        #phone-number {
+            display: flex;
+            margin: 0 10px;
+            position: relative;
+            left: -100%;
+            animation: slide-in 2s forwards;
+            font-size: large;
+            color: white;
+            margin-top: 5px;
+        }
+
+        .github {
+            display: block;
+            flex-direction: row-reverse;
+            margin: 0 10px;
+            margin-top: 7px;
+            position: relative;
+            left: 100%;
+            animation: slide-in 1s forwards;
+            font-size: large;
+            color: white;
+        }
+
+
+        .skills {
+            position: absolute;
+            top: 70%;
+            left: 2%;
+            display: flex;
+        }
+
+        .basic {
+            color: white;
+            border: 2px solid rgb(133, 132, 130);
+            border-radius: 50px;
+            width: 100px;
+            height: 50px;
+            /* background-color: rebeccapurple; */
+            /* display: block; */
+            margin: 3px 3px;
+            padding: 5px 5px;
+            text-shadow: 2px 2px 4px #270de4;
+
+            animation: slide-up 1s ease-out;
+
+        }
+
+        @keyframes slide-up {
+            0% {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+
+
+
+
+
+
+
+        .advance {
+            color: white;
+            border: 2px solid rgb(88, 84, 84);
+            border-radius: 50px;
+            width: 100px;
+            height: 50px;
+            /* display: flex; */
+            margin: 3px 3px;
+            padding: 5px 5px;
+            text-shadow: 2px 2px 4px #e12222;
+
+            animation: slide-up 1s ease-out;
+        }
+
+        @keyframes slide-up {
+            0% {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .advanceskill {
+            position: absolute;
+            top: 85%;
+            left: 5%;
+            display: flex;
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">J<span>K</span></div>
+        <div class="links">
+            <a href="#">Home</a>
+            <a href="#">Portfolio</a>
+            <a href="#">About</a>
+        </div>
+    </nav>
+    <div class="text-container">
+        <h2 class="text">Front-End Developer</h2>
+    </div>
+
+    <section class="mainbox">
+        <div class="box">
+            <img src="images/jawad.jpg.jpg" alt="No File Exist">
+            <div class="blocks">
+                <div class="content">
+                    <h1 style="text-shadow: 3px 3px 4px #bc3131; color: white;">Hey I'm Jawad Khan</h1>
+                    <p class="para3">
+                        I have a passion for creating visually appealing and intuitive user
+                        interfaces. With knowledge of HTML, CSS, and JavaScript, I strive to make web applications that
+                        are
+                        not only functional, but also engaging and delightful to use. I am dedicated to staying up to
+                        date
+                    </p>
+                    <button id="btn3" onclick="myFunction()">Hire Me</button>
+                    <script>
+                        function myFunction() {
+                            alert("Thanks for Reachout. Click on the Contact Button");
+                        }
+                        document.getElementById("btn3").addEventListener('click', myFunction);
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <button id="btn" onclick="sendEmail()">Contact Us</button>
+
+            <script>
+                function sendEmail() {
+                    window.location.href = "https://www.linkedin.com/in/jawad-khan-839a3b217/";
+                }
+            </script>
+            <a href="jawadmarwat056@gmail.com" class="link">jawadmarwat056@gmail.com
+                <i class="fas fa-envelope">&nbsp;&nbsp;</i></a>
+            <a href="https://github.com/jawadkhan12345" class="github">GITHUB.com </a>
+            <div class="no">
+                <p id="phone-number"></p>
+                <script>
+                    const phone_number = "0342-0541664";
+                    document.getElementById("phone-number").textContent = phone_number;
+                </script>
+            </div>
+        </div>
+    </section>
+    <section class="skills">
+        <div class="basic">
+            <h3>HTML5</h3>
+        </div><br>
+        <div class="basic">
+            <h3>CSS3</h3>
+
+        </div>
+        <div class="basic">
+            <h3>BootStrap</h3>
+
+        </div>
+    </section>
+    <section class="advanceskill">
+        <div class="advance">
+            <h3>JavaScript</h3>
+        </div>
+        <div class="advance">
+            <h3>
+                <center>React</center>
+            </h3>
+        </div>
+    </section>
+</body>
+
+</html>
